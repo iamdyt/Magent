@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./css/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Mobile Agent</title>
+  </head>
+  <body class='bg-info'>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <p class=" mt-3 text-light pstyle text-center"> Mobile Agent on Telerheumatology</p>
+            
+          <!-- <p class="mt-5 text-light pstyle text-center" style='margin-top:8.3em !important;'>A Project by Olanlokun Lanre.O</p> -->
+        </div>
+      </div>
+      <div class="row mt-5">
+        <div class="col-6 offset-3">
+          <section id='sect1' class='shadow p-5'>
+            <p class="text-center lead bg-dark text-light">Administrator Login</p>
+            <p id='msg' class="lead text-center text-light" style='font-weight:bold'></p>
+              <form action="">
+                <input type="text" id='lguser' placeholder='Username' maxlength='10' required class="form-control">
+                <input type="password" id='lgpass' placeholder='Password' maxlength='10' required class="form-control mt-3">
+                <div>
+                  <button id='lgbtn' class="btn btn-dark mt-3 btn-block">Signin</button>
+                </div>
+              </form>
+              <p class="text-center text-light lead">Not yet registered? </p> 
+              <a href=""><p id='reg' class="text-center" style='color:red ! important'>Create an Account</p></a>
+            
+          </section>
+          <!-- Registration form section-->
+           <section id='sect2' class='shadow p-5'>
+            <p class="text-center lead bg-dark text-light">Administrator Registration</p>
+           <form action="">
+              <input type="text" id='reguser' placeholder='Username' maxlength='10' required class="form-control">
+              <input type="password" id='regpass'  placeholder='Password' maxlength='10' required class="form-control mt-3">
+              <div>
+                <button id='regbtn' class="btn btn-dark mt-3 btn-block">Register</button>
+              </div>
+           </form>
+              <p class="text-center text-light lead">Already a user? </p> 
+              <a href=""><p id='login' class="text-center" style='color:red ! important'>Login Here</p></a>
+            
+          </section>
+        </div>
+      </div>
+    </div>
+    
+
+    <!-- You can also require other files to run in this process -->
+    <script src="./js/jquery.min.js"></script>
+    <script src="../renderer.js"></script>
+     <script src="./js/index.js"></script>
+    <script src="./css/bootstrap/js/bootstrap.min.js"></script>
+   
+  </body>
+</html>

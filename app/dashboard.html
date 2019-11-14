@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./css/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./fontawesome/css/all.css">
+    <title>Mobile Agent - Dashboard</title>
+  </head>
+  <body class='bg-info'>
+ <p class="text-light text-left bg-dark p-2 shadow" style='font-size:2em; -webkit-app-region:drag'> <i class="fas fa-rocket"></i> &emsp; Mobile Agent Dashboard  <!-- <span id='admin' class='text-warning'> System User:&nbsp;</span> --> <span class='float-right'><i id='maxi' class="fas fa-plus-circle"></i>&emsp; <i id='mini' class="fas fa-minus-circle"></i>&emsp;<i id='close' class="fas fa-times-circle"></i></span>  </p>
+<section class="container-fluid">
+  <div class="row">
+    <div class="col-4">
+    <p class="text-center lead text-light bg-dark p-3" style='font-size:1.5em;'> <i class="fas fa-desktop" ></i> &emsp; Client Connection Parameters</p>
+      <ul class="list-group">
+        <li class="list-group-item">HostName <span id='host' class=' badge bdage-pill badge-danger float-right p-2'> </span> </li>
+        <li class="list-group-item">Platform <span id='platform' class=' badge bdage-pill badge-danger float-right p-2'> </span> </li>
+        <li class="list-group-item">Architecture <span id='arch' class=' badge bdage-pill badge-danger float-right p-2'> </span> </li>
+        <li class="list-group-item">Total-Memory <span id='mem' class=' badge bdage-pill badge-danger float-right p-2'> </span> </li>
+        <li class="list-group-item">Mac_Address <span id='mac' class=' badge bdage-pill badge-danger float-right p-2'> No Connection Detected </span> </li>
+        <li class="list-group-item">IP_Address <span id='ip' class=' badge bdage-pill badge-danger float-right p-2'> No Connection Detected </span> </li>
+        <li class="list-group-item">NetMask <span id='net' class=' badge bdage-pill badge-danger float-right p-2'> No Connection Detected </span> </li>
+        <li class="list-group-item">Gateway IP<span id='gate' class=' badge bdage-pill badge-danger float-right p-2'> No Connection Detected </span> </li>
+      </ul>
+    </div>
+    <!--Second Column-->
+    <div class="col-4">
+      <p class="text-center lead text-light bg-dark p-3" style='font-size:1.5em;' > <i class="fas fa-satellite" ></i> &emsp;Agent Dispersion</p>
+      <div class="card">
+        <div class="card-body">
+           <div class="form-group">
+            <label for="">Agent Permitted Entry Point</label>
+            <input type="text" placeholder="Entry point address" required class='form-control'>
+            <button class="btn btn-info mt-3 btn-block">Launch Agent &rarr;</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Third Column-->
+    <div class="col-4">
+      <p class="text-center lead text-light bg-dark p-3" style='font-size:1.5em;' > <i class="fas fa-terminal" ></i> &emsp;Entity Console</p>
+      <textarea readonly style='resize:none;'  class='form-control' placeholder='Agent return messages are shown Here' name="" id="" cols="30" rows="17"></textarea>
+      
+    </div>
+  </div>
+
+</section>
+    
+
+    <!-- You can also require other files to run in this process -->
+    <script src="../renderer.js"></script>
+    <script src="./js/jquery.min.js"></script>   
+    <script src="./css/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./js/dashboard.js"></script>
+    <script src="./fontawesome/js/all.js"></script>
+  </body>
+</html>
