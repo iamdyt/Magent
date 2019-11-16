@@ -8,7 +8,7 @@
     <title>Mobile Agent - Dashboard</title>
   </head>
   <body class='bg-info'>
- <p class="text-light text-left bg-dark p-2 shadow" style='font-size:2em; -webkit-app-region:drag'> <i class="fas fa-rocket"></i> &emsp; Mobile Agent Dashboard  <!-- <span id='admin' class='text-warning'> System User:&nbsp;</span> --> <span class='float-right'><i id='maxi' class="fas fa-plus-circle"></i>&emsp; <i id='mini' class="fas fa-minus-circle"></i>&emsp;<i id='close' class="fas fa-times-circle"></i></span>  </p>
+ <p class="text-light text-left bg-dark p-2 shadow" style='font-size:1.55em; -webkit-app-region:drag'> <i class="fas fa-rocket"></i> &emsp; Mobile Agent Dashboard   <span class='float-right'> <button class="btn btn-outline-secondary rounded-0 text-light">Logout</button></span>  </p>
 <section class="container-fluid">
   <div class="row">
     <div class="col-4">
@@ -31,9 +31,10 @@
         <div class="card-body">
            <div class="form-group">
             <label for="">Agent Permitted Entry Point</label>
-            <input type="text" placeholder="Entry point address" required class='form-control'>
-            <button class="btn btn-info mt-3 btn-block">Launch Agent &rarr;</button>
+            <input id='entrypoint' type="text" placeholder="Entry point address" required class='form-control'>
+            <button id='launch' class="btn btn-info mt-3 btn-block">Launch Agent &rarr;</button>
           </div>
+           <button id='resety' class="btn btn-danger mt-3 btn-block">Clear Console </button>
         </div>
       </div>
     </div>
@@ -41,7 +42,7 @@
     <!--Third Column-->
     <div class="col-4">
       <p class="text-center lead text-light bg-dark p-3" style='font-size:1.5em;' > <i class="fas fa-terminal" ></i> &emsp;Entity Console</p>
-      <textarea readonly style='resize:none;'  class='form-control' placeholder='Agent return messages are shown Here' name="" id="" cols="30" rows="17"></textarea>
+      <textarea readonly style='resize:none;'  class='form-control' placeholder='Agent return messages are shown Here' name="" id="console" cols="30" rows="17"></textarea>
       
     </div>
   </div>

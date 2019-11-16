@@ -20,5 +20,28 @@ $(()=>{
      $('#maxi').mouseover(()=>{
          $(this).addClass('text-info')
      })
-   
+
+    //  Launching Agent
+    $('#launch').click(function(e){
+       $('#console').val('')
+        e.preventDefault()
+        const entrypoint = $('#entrypoint').val();
+        $.ajax({
+            url:'http://'+entrypoint,
+            success:function(e){
+                
+               e.forEach(data => {
+                document.getElementById('console').value+=JSON.stringify(data)+'\n'+'\n'
+
+            });
+               
+                
+                
+            }
+        })
+    })
+    // Reset Console
+    $('#resety').click(function(e){
+        $('#console').val('')
+    })
 })
